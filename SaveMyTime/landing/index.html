@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+        animation: scroll 20s linear infinite;
+    }
+    .carousel:hover .animate-scroll {
+        animation-play-state: paused;
+    }
+  </style>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Save My Time</title>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <div class="w-full grid grid-cols-1 md:grid-cols-[1fr_5fr] gap-6">
+
+    <!-- Фото + ссылки -->
+    <div class="flex flex-col items-center md:items-start gap-4">
+      <img src="app_image.png" class="w-48 md:w-56 rounded shadow" alt="App image">
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="text-blue-600 hover:underline">Google Play</a>
+        <a href="#" class="text-blue-600 hover:underline">RuStore</a>
+        <a href="#" class="text-blue-600 hover:underline">Пользовательское соглашение</a>
+      </div>
+    </div>
+
+    <!-- Описание -->
+    <div>
+      <h1 class="text-3xl font-bold mb-4">Save My Time</h1>
+      <p class="text-lg leading-relaxed">
+        Короткое описание приложения.
+      </p>
+    </div>
+
+    <!-- Контакты -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2">Контакты</h2>
+      <p>Email: </p>
+      <p>Telegram: </p>
+      <p>GitHub: </p>
+    </div>
+
+    <!-- Скриншоты  -->
+<div class="carousel overflow-hidden relative">
+  <div class="flex gap-4 animate-scroll whitespace-nowrap">
+    <img src="screenshot1.png" class="h-48 inline-block rounded-lg" />
+    <img src="screenshot2.png" class="h-48 inline-block rounded-lg" />
+    <img src="screenshot3.png" class="h-48 inline-block rounded-lg" />
+    <img src="screenshot4.png" class="h-48 inline-block rounded-lg" />
+    <!-- копия для бесконечной прокрутки -->
+    <img src="screenshot1.png" class="h-48 inline-block rounded-lg" />
+    <img src="screenshot2.png" class="h-48 inline-block rounded-lg" />
+    <img src="screenshot3.png" class="h-48 inline-block rounded-lg" />
+    <img src="screenshot4.png" class="h-48 inline-block rounded-lg" />
+  </div>
+</div>
+
+
+
+  </div>
+
+</body>
+</html>
