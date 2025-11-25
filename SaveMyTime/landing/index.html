@@ -3,31 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-    .animate-scroll {
-        animation: scroll 20s linear infinite;
-    }
-    .carousel:hover .animate-scroll {
-        animation-play-state: paused;
-    }
-  </style>
-
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
   <title>Save My Time</title>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-white text-gray-900 relative overflow-hidden">
 
-  <div class="w-full grid grid-cols-1 md:grid-cols-[1fr_5fr] gap-6">
+  <svg width="0" height="0">
+    <clipPath id="clipDesktop" clipPathUnits="objectBoundingBox">
+  <path d="
+    M0,0 
+    L1,0 
+    C0.9,0.4 0.7,0.7 0.5,0.85 
+    C0.3,1 0.1,0.8 0,1 
+    Z"/>
+</clipPath>
+
+
+<clipPath id="clipMobile" clipPathUnits="objectBoundingBox">
+  <path d="
+    M0,0 
+    L1,0 
+    L1,0.70
+
+    C0.85,0.70 0.80,0.95 0.67,0.98
+    C0.55,1.02 0.48,0.85 0.40,0.82
+    C0.30,0.78 0.22,0.76 0.12,0.82
+    C0.05,0.86 0.02,0.93 0,1
+
+    L0,0 
+    Z"/>
+</clipPath>
+
+
+
+<div class="clip-triangle-svg pointer-events-none absolute top-0 left-0 w-full h-[400px] md:h-[500px] bg-blue-200">
+</div>
+
+
+  <div class="w-full grid grid-cols-1 md:grid-cols-[1fr_5fr] gap-6 relative z-10">
 
     <!-- Фото + ссылки -->
     <div class="flex flex-col items-center md:items-start gap-4">
       <img src="app_image.png" class="w-48 md:w-56 rounded shadow" alt="App image">
-
       <div class="flex flex-wrap gap-4">
         <a href="#" class="text-blue-600 hover:underline">Google Play</a>
         <a href="#" class="text-blue-600 hover:underline">RuStore</a>
@@ -38,9 +57,7 @@
     <!-- Описание -->
     <div>
       <h1 class="text-3xl font-bold mb-4">Save My Time</h1>
-      <p class="text-lg leading-relaxed">
-        Короткое описание приложения.
-      </p>
+      <p class="text-lg leading-relaxed">Короткое описание приложения.</p>
     </div>
 
     <!-- Контакты -->
@@ -51,24 +68,20 @@
       <p>GitHub: </p>
     </div>
 
-    <!-- Скриншоты  -->
-<div class="carousel overflow-hidden relative">
-  <div class="flex gap-4 animate-scroll whitespace-nowrap">
-    <img src="screenshot1.png" class="h-48 inline-block rounded-lg" />
-    <img src="screenshot2.png" class="h-48 inline-block rounded-lg" />
-    <img src="screenshot3.png" class="h-48 inline-block rounded-lg" />
-    <img src="screenshot4.png" class="h-48 inline-block rounded-lg" />
-    <!-- копия для бесконечной прокрутки -->
-    <img src="screenshot1.png" class="h-48 inline-block rounded-lg" />
-    <img src="screenshot2.png" class="h-48 inline-block rounded-lg" />
-    <img src="screenshot3.png" class="h-48 inline-block rounded-lg" />
-    <img src="screenshot4.png" class="h-48 inline-block rounded-lg" />
+    <!-- Скриншоты -->
+    <div class="carousel overflow-hidden">
+      <div class="flex gap-4 animate-scroll whitespace-nowrap">
+        <img src="screenshot1.png" class="h-48 inline-block rounded-lg" />
+        <img src="screenshot2.png" class="h-48 inline-block rounded-lg" />
+        <img src="screenshot3.png" class="h-48 inline-block rounded-lg" />
+        <img src="screenshot4.png" class="h-48 inline-block rounded-lg" />
+
+        <img src="screenshot1.png" class="h-48 inline-block rounded-lg" />
+        <img src="screenshot2.png" class="h-48 inline-block rounded-lg" />
+        <img src="screenshot3.png" class="h-48 inline-block rounded-lg" />
+        <img src="screenshot4.png" class="h-48 inline-block rounded-lg" />
+      </div>
+    </div>
   </div>
-</div>
-
-
-
-  </div>
-
 </body>
 </html>
