@@ -18,6 +18,9 @@
     position: absolute;
     clip-path: url(#clipDesktop);
     z-index: -1;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -26,5 +29,12 @@
         height: 120vw;
         clip-path: url(#clipMobile);
         z-index: -1;
+
+        opacity: 0;
+        transition: opacity 0.8s ease-out;
     }
+}
+
+body.loaded .clip-svg {
+  opacity: 1;
 }
