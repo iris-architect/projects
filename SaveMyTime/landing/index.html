@@ -22,16 +22,15 @@
     </clipPath>
   </svg>
 
-  <div class="relative">
     <div class="clip-svg pointer-events-none absolute top-0 left-0 w-full h-[400px] md:h-[500px]"></div>
 
-    <div class="w-full min-h-screen grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-20 relative z-10">
+    <div class="w-full min-h-screen grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-x-10 gap-y-8 relative z-10">
 
       <!-- Фото + ссылки -->
-      <div class="flex flex-col items-center md:items-start gap-4 ml-4">
+      <div class="flex flex-row md:flex-col items-start md:items-start gap-4 ml-4 order-1">
         <img src="icon.png" class="w-24 sm:w-30 md:w-36 lg:w-40 rounded shadow" alt="icon">
-        <div class="download-card mt-2 p-4 ml-4 rounded-xl bg-black/40 backdrop-blur">
-          <div class="flex flex-col gap-1">
+        <div class="download-card mt-2 p-3 md:mt-0 w-40 p-2 rounded-xl bg-black/40 backdrop-blur">
+          <div class="flex flex-col items-center gap-1">
             <a href="#" class="download-link">Google Play</a>
             <a href="#" class="download-link">RuStore</a>
           </div>
@@ -39,35 +38,31 @@
       </div>
 
       <!-- Описание -->
-      <div class="mr-8 ml-4">
-        <h1 class="blend-title mb-4 mt-4 text-4xl md:text-6xl"><b>Save My Time</b></h1>
-        <p class="blend-title">У вас не хватает времени на встречи с друзьями и отдых?</p>
-        <p class="blend-title">Кажется, что на хобби и даже бытовые дела постоянно не остаётся сил?</p>
-        <p class="blend-title">Вы чувствуете себя загнанным в бесконечный цикл «работа — дом», в котором всё остальное откладывается на потом?</p>
-        <p class="blend-title mb-4 mt-4"><b>Проблема не в вас — проблема в хаотичном планировании.</b></p>
-        <p class="blend-title">Это приложение помогает превратить цели и задачи в реалистичное расписание, которое учитывает работу, сон, события и так необходимое время для отдыха — а не игнорирует их.
+      <div class="mr-8 ml-4 order-2">
+        <h1 class="mt-20 md:my-4 text-4xl md:text-6xl"><b>Save My Time</b></h1>
+        <p class="description text-sm md:text-sm lg:!text-[1.1rem] lg:leading-snug">У вас не хватает времени на встречи с друзьями и отдых?</p>
+        <p class="description text-sm md:text-sm lg:!text-[1.1rem] lg:leading-snug">Кажется, что на хобби и даже бытовые дела постоянно не остаётся сил?</p>
+        <p class="description text-sm md:text-sm lg:!text-[1.1rem] lg:leading-snug">Вы чувствуете себя загнанным в бесконечный цикл «работа — дом», в котором всё остальное откладывается на потом?</p>
+        <p class="description text-sm md:text-sm lg:!text-[1.1rem] lg:leading-snug mt-4 mb-4"><b>Проблема не в вас — проблема в хаотичном планировании.</b></p>
+        <p class="description text-sm md:text-sm lg:!text-[1.1rem] lg:leading-snug">Это приложение помогает превратить цели и задачи в реалистичное расписание, которое учитывает работу, сон, события и так необходимое время для отдыха — а не игнорирует их.
         Вы получаете понятную структуру, в которой легко двигаться шаг за шагом — без давления и прокрастинации.</p>
       </div>
 
       <!-- Контакты -->
-      <div class="flex flex-col h-full">
-        <div class="mt-auto p-4 ml-4 mb-16">
-          <p class="blend-title text-sm mb-2">
-            <b>Поддержка и сотрудничество:</b>
-          </p>
-
-          <div class="flex flex-col gap-1 text-sm">
-            <p class="blend-title">Telegram: <a href="https://t.me/arch_rly" class="contact-link">@arch_rly</a></p>
-            <p class="blend-title">Email: <a href="mailto:IrinaAlexandrova87@yandex.ru" class="contact-link">IrinaAlexandrova87@yandex.ru</a></p>
-            <p class="blend-title">GitHub: <a href="https://github.com/iris-architect" class="contact-link">Architect of Reality</a></p>
+      <div class="flex flex-col h-full order-4 md:order-3 justify-self-end md:justify-self-start p-4 md:p-1">
+        <div class="mt-auto pl-4 mb-16">
+          <h2 class="text-xs md:text-base mb-3"><b>Поддержка и сотрудничество:</b></h2>
+          <div class="flex flex-col gap-1 text-xs md:text-sm">
+            <p>Telegram: <a href="https://t.me/arch_rly" class="contact-link">@arch_rly</a></p>
+            <p>Email: <a href="mailto:IrinaAlexandrova87@yandex.ru" class="contact-link">IrinaAlexandrova87@yandex.ru</a></p>
+            <p>GitHub: <a href="https://github.com/iris-architect" class="contact-link">Architect of Reality</a></p>
           </div>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start md:-mt-24 mt-12">
-        
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start order-3 md:order-4">
         <!-- Скриншоты -->
-        <div class="relative overflow-hidden">
+        <div class="relative overflow-hidden w-[250px] mx-auto sm:w-full order-2 md:order-1">
           <div id="slider" class="flex transition-transform duration-700 ease-out">
             <img src="schedule.png" class="slide" />
             <img src="task_list.png" class="slide" />
@@ -80,22 +75,18 @@
           </div>
         </div>
 
-        <div class="mt-12 ml-8">
-          <h3 class="blend-title mb-3 text-lg font-semibold">
-            Основные возможности Save My Time
-          </h3>
-
-          <ul class="space-y-2 text-sm">
-            <li class="blend-list">Автоматическое планирование задач и целей</li>
-            <li class="blend-list">Учёт сна, работы и событий</li>
-            <li class="blend-list">Поддержка разовых и регулярных задач</li>
-            <li class="blend-list">Анализ хронотипа и уровня концентрации</li>
-            <li class="blend-list">Приоритеты с учётом важности, сложности и мотивации</li>
+        <div class="items-start md:justify-self-center p-4 order-1 md:order-2">
+          <h2 class="text-sm md:text-base mb-3"><b>Основные возможности Save My Time</b></h2>
+          <ul class="space-y-2 text-sm md:text-sm">
+            <li class="features-list">Автоматическое планирование задач и целей</li>
+            <li class="features-list">Учёт сна, работы и событий</li>
+            <li class="features-list">Поддержка разовых и регулярных задач</li>
+            <li class="features-list">Анализ хронотипа и уровня концентрации</li>
+            <li class="features-list">Приоритеты с учётом важности, сложности и мотивации</li>
           </ul>
         </div>
-
+      </div>
     </div>
-  </div>
   <script src="main.js"></script>
   </body>
 </html>

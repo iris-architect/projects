@@ -1,19 +1,4 @@
-.slide {
-  width: calc(33.3333% - 1.5rem);
-  margin: 0.75rem;
-  flex-shrink: 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  border-radius: 1.25rem;
-  background: #111;
-}
-
-@media (max-width: 768px) {
-  .slide {
-    width: calc(100% - 2rem);
-    margin: 1rem auto;
-  }
-}
-
+/* Фоновое изображение */
 .clip-svg {
     background-image: url('backgroung1.jpg');
     background-size: cover;
@@ -21,7 +6,6 @@
     position: absolute;
     clip-path: url(#clipDesktop);
     z-index: 0;
-
     opacity: 0;
     transition: opacity 0.8s ease-out;
 }
@@ -38,61 +22,56 @@
     }
 }
 
+/* Загрузка SVG файла*/
 body.loaded .clip-svg {
   opacity: 1;
 }
 
-.hero {
-  isolation: isolate;
-}
-
-.blend-title {
+/* Общие настройки текста*/
+h1, h2, h3, h4, h5, h6, p, li, span {
   color: #ffffff;
   text-shadow:
-    0 0 2px rgba(0,0,0,0.9),
-    0 0 6px rgba(0,0,0,0.7);
+    0 0 6px rgba(0,0,0,0.9),
+    0 0 9px rgba(0,0,0,0.7);
 }
 
-.blend-links a {
-  color: rgb(131, 239, 239);
-  mix-blend-mode: difference;
-  font-weight: 500;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
-
-.blend-links a:hover {
-  color: rgb(255, 193, 49);
-}
-
-.download-link {
+/* Ссылки на скачивание и связь*/
+.download-link, .contact-link {
   font-weight: 600;
   color: #7efcff;
   text-decoration: none;
 }
 
-.download-link:hover {
+.download-link:hover, .contact-link:hover {
   color: #ffc131;
 }
 
-.contact-link {
-  color: #7efcff;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.contact-link:hover {
-  color: #ffc131;
-}
-
-.blend-list {
-  color: #ffffff;
-  text-shadow:
-    0 0 2px rgba(0,0,0,0.9),
-    0 0 6px rgba(0,0,0,0.7);
-}
-
-.blend-list::before {
+/* Печерисления*/
+.features-list::before {
   content: "—";
   margin-right: 0.5rem;
   opacity: 0.6;
+}
+
+/* Настройка карусели скриншотов*/
+.slide {
+  flex-shrink: 0;
+  width: calc(33.3333% - 1.5rem); /* 3 */
+  margin: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  border-radius: 1rem;
+  background: #111;
+}
+
+@media (max-width: 1023px) {
+  .slide {
+    width: calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 639px) {
+  .slide {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
